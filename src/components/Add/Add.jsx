@@ -1,11 +1,11 @@
-import './Add.css'
+import style from './Add.module.css'
 
 
 function Add(props) {
     return(
-        <div className='input'>
-         <input className='inputCase' value={props.text} onChange={props.changeValue}/>
-         <button className='butt' onClick={props.addTodo}>+</button>
+        <div className={style.input}>
+         <input className={style.inputCase} value={props.text} onChange={props.changeValue}/>
+         <button className={style.butt} onClick={props.addTodo}>+</button>
         </div>
     )
 }

@@ -41,7 +41,6 @@ function App() {
     }
   }))
  }
- console.log(todos.title);
  
   return (
     <div className='app'>
