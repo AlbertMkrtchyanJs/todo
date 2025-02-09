@@ -1,4 +1,5 @@
 import './InpBox.css'
+import Edit from '../Edit/Edit'
 
 function InpBox(props) {
     return(
@@ -8,7 +9,7 @@ function InpBox(props) {
           return(
             <li className='li' key={todo.id}>
               <input className='checked' type="checkbox" checked={todo.isDone} onChange={() => props.change(todo.id)}/>
-              <span className='title'>{todo.title}</span>
+              <span className='title' onDoubleClick={() => <Edit todo ={todo}/>}>{todo.title}</span>
               <button className='but' onClick={() => props.remove(todo.id)}>X</button>
             </li>
           )
